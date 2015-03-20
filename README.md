@@ -20,3 +20,7 @@ Note that thorough input validation has been eschewed for the sake of brevity.
 | 12  | [Highly divisible triangular number](https://projecteuler.net/problem=12) | [problem012.cpp](problem012.cpp) |
 | 13  | [Large sum](https://projecteuler.net/problem=13) | [problem013.cpp](problem013.cpp) |
 | 14  | [Longest Collatz sequence](https://projecteuler.net/problem=14) | [problem014.cpp](problem014.cpp) |
+| 15  | [Lattice paths](https://projecteuler.net/problem=15) | [problem015.cpp](problem015.cpp) |
+| 16  | [Power digit sum](https://projecteuler.net/problem=16) | [problem016.cpp](problem016.cpp) |
+| 17  | [Number letter counts](https://projecteuler.net/problem=17) | [problem017.cpp](problem017.cpp) |
+| 18  | [Maximum path sum I](https://projecteuler.net/problem=18) | [problem018.cpp](problem018.cpp) |

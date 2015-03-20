@@ -1,5 +1,5 @@
 // Compile with the following command:
-// g++ problem13.cpp -lgmpxx -lgmp
+// g++ problem013.cpp -lgmpxx -lgmp
 
 #include <gmpxx.h>
 

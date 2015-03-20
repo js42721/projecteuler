@@ -5,7 +5,7 @@ int longestCollatz(int upper)
 {
     // Only numbers up to the upper limit are memoized since terms in a
     // sequence can get large.
-    std::vector<int> mem(upper + 1, 0);
+    std::vector<int> mem(upper + 1);
     std::vector<int> chain;
     mem[1] = 1;
     int ret = -1;
