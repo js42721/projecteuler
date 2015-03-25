@@ -24,3 +24,12 @@ Note that thorough input validation has been eschewed for the sake of brevity.
 | 16  | [Power digit sum](https://projecteuler.net/problem=16) | [problem016.cpp](problem016.cpp) |
 | 17  | [Number letter counts](https://projecteuler.net/problem=17) | [problem017.cpp](problem017.cpp) |
 | 18  | [Maximum path sum I](https://projecteuler.net/problem=18) | [problem018.cpp](problem018.cpp) |
+| 19  | [Counting Sundays](https://projecteuler.net/problem=19) | [problem019.cpp](problem019.cpp) |
+| 20  | [Factorial digit sum](https://projecteuler.net/problem=20) | [problem020.cpp](problem020.cpp) |
+| 21  | [Amicable numbers](https://projecteuler.net/problem=21) | [problem021.cpp](problem021.cpp) |
+| 22  | [Names scores](https://projecteuler.net/problem=22) | [problem022.cpp](problem022.cpp) |
+| 23  | [Non-abundant sums](https://projecteuler.net/problem=23) | [problem023.cpp](problem023.cpp) |
+| 24  | [Lexicographic permutations](https://projecteuler.net/problem=24) | [problem024.cpp](problem024.cpp) |
+| 25  | [1000-digit Fibonacci number](https://projecteuler.net/problem=25) | [problem025.cpp](problem025.cpp) |
+| 26  | [Reciprocal cycles](https://projecteuler.net/problem=26) | [problem026.cpp](problem026.cpp) |
+| 27  | [Quadratic primes](https://projecteuler.net/problem=27) | [problem027.cpp](problem027.cpp) |

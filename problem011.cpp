@@ -1,4 +1,5 @@
 #include <algorithm>
+#include <cstdlib>
 #include <fstream>
 #include <iostream>
 #include <sstream>
@@ -51,7 +52,7 @@ int main(int argc, char* argv[])
     std::ifstream file(argv[1]);
     if (!file.is_open()) {
         std::cerr << "Cannot open " << argv[1] << '\n';
-        return 1;
+        return EXIT_FAILURE;
     }
     std::vector<int> a;
     std::string line;

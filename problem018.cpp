@@ -1,4 +1,5 @@
 #include <cmath>
+#include <cstdlib>
 #include <fstream>
 #include <iostream>
 #include <vector>
@@ -25,7 +26,7 @@ int main(int argc, char* argv[])
     std::ifstream file(argv[1]);
     if (!file.is_open()) {
         std::cerr << "Cannot open " << argv[1] << '\n';
-        return 1;
+        return EXIT_FAILURE;
     }
     std::vector<int> triangle;
     int x;

@@ -3,26 +3,30 @@
 
 long long largestPrimeFactor(long long n)
 {
+    if (n < 2) {
+        return -1;
+    }
+    static int a[] = { 2, 3 };
     long long x = n;
-    while (x % 2 == 0) {
-        x /= 2;
+    for (int i = 0; i < 2; ++i) {
+        int factor = a[i];
+        while (x % factor == 0) {
+            x /= factor;
+        }
+        if (x == 1) {
+            return factor;
+        }
     }
-    if (x == 1) {
-        return 2;
-    }
-    long long factor = 3;
+    long long factor = 5;
     long long sqrtX = sqrt(x);
-    int skip = 1;
+    int twoFour = 2;
     while (factor <= sqrtX) {
         if (x % factor == 0) {
             x /= factor;
             sqrtX = sqrt(x);
-        } else if (factor < 7) {
-            factor += 2;
         } else {
-            // The increment alternates between 4 and 2.
-            factor += 2 * (skip + 1);
-            skip = (skip + 1) & 1;
+            factor += twoFour;
+            twoFour ^= 6;
         }
     }
     return x;

@@ -3,6 +3,7 @@
 
 #include <gmpxx.h>
 
+#include <cstdlib>
 #include <fstream>
 #include <iostream>
 #include <string>
@@ -16,7 +17,7 @@ int main(int argc, char* argv[])
     std::ifstream file(argv[1]);
     if (!file.is_open()) {
         std::cerr << "Cannot open " << argv[1] << '\n';
-        return 1;
+        return EXIT_FAILURE;
     }
     mpz_class sum;
     std::string line;

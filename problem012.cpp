@@ -2,36 +2,40 @@
 #include <iostream>
 
 int factors(int n)
-{    
+{
     // The factors of an integer can be counted by adding 1 to each of the
     // exponents in its prime factorization and then multiplying the results.
     // For example, 1000 = 2^3 * 5^3, so there are (3 + 1) * (3 + 1) factors.
+    if (n < 1) {
+        return -1;
+    }
+    static int a[] = { 2, 3 };
     int ret = 1;
     int x = n;
-    while (x % 2 == 0) {
-        x /= 2;
-        ++ret;
+    for (int i = 0; i < 2; ++i) {
+        int factor = a[i];
+        int k = 0;
+        while (x % factor == 0) {
+            x /= factor;
+            ++k;
+        }
+        ret *= k + 1;
+        if (x == 1) {
+            return ret;
+        }
     }
-    if (x == 1) {
-        return ret;
-    }
-    int factor = 3;
+    int factor = 5;
     int sqrtX = sqrt(x);
-    int skip = 1;
+    int skip = 2;
     int k = 0;
     while (factor <= sqrtX) {
         if (x % factor == 0) {
             x /= factor;
             sqrtX = sqrt(x);
             ++k;
-        } else if (factor < 7) {
-            factor += 2;
-            ret *= k + 1;
-            k = 0;
         } else {
-            // The increment alternates between 4 and 2.
-            factor += 2 * (skip + 1);
-            skip = (skip + 1) & 1;
+            factor += skip;
+            skip ^= 6;
             ret *= k + 1;
             k = 0;
         }
