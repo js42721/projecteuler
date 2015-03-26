@@ -44,6 +44,9 @@ std::pair<int, int> eulerNumbers()
             int n = 0;
             for (;;) {
                 int c = n * (a + n) + b;
+                if (c < 2) {
+                    break;
+                }
                 if (!((c <= 999) ? sieve.isPrime(c) : isPrime(c))) {
                     break;
                 }

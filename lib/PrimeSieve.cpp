@@ -12,7 +12,6 @@ PrimeSieve::PrimeSieve(int upper)
     int s1 = 7, s2 = 3;
     int twoSix = 2;
     int sqrtLimit = sqrt(upper) / 3;
-    // Sieve of Eratosthenes with a mod 6 wheel.
     for (int i = 1; i <= sqrtLimit; ++i) {
         if (sieve[i]) {
             int s3 = s1 + s2;
@@ -53,24 +52,25 @@ int PrimeSieve::countPrimes() const
 int PrimeSieve::nthPrime(int n) const
 {
     if (n < 1 || n > results.size()) {
-        throw std::invalid_argument("n out of range");
+        throw std::out_of_range("n out of range");
     }
     return results[n - 1];
 }
 
 bool PrimeSieve::isPrime(int n) const
 {
-    if (n == 2 || n == 3) {
+    if (n < 1 || n > upper) {
+        throw std::out_of_range("n out of range");
+    }
+    switch (n) {
+    case 1:
+        return false;
+    case 2:
+    case 3:
         return true;
     }
     if (n % 2 == 0 || n % 3 == 0) {
         return false;
-    }
-    if (n < 2) {
-        return false;
-    }
-    if (n > upper) {
-        throw std::invalid_argument("n out of range");
     }
     return sieve[n / 3];
 }
