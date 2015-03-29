@@ -33,3 +33,9 @@ Note that thorough input validation has been eschewed for the sake of brevity.
 | 25  | [1000-digit Fibonacci number](https://projecteuler.net/problem=25) | [problem025.cpp](problem025.cpp) |
 | 26  | [Reciprocal cycles](https://projecteuler.net/problem=26) | [problem026.cpp](problem026.cpp) |
 | 27  | [Quadratic primes](https://projecteuler.net/problem=27) | [problem027.cpp](problem027.cpp) |
+| 28  | [Number spiral diagonals](https://projecteuler.net/problem=28) | [problem028.cpp](problem028.cpp) |
+| 29  | [Distinct powers](https://projecteuler.net/problem=29) | [problem029.cpp](problem029.cpp) |
+| 30  | [Digit fifth powers](https://projecteuler.net/problem=30) | [problem030.cpp](problem030.cpp) |
+| 31  | [Coin sums](https://projecteuler.net/problem=31) | [problem031.cpp](problem031.cpp) |
+| 32  | [Pandigital products](https://projecteuler.net/problem=32) | [problem032.cpp](problem032.cpp) |
+

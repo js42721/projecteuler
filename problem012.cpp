@@ -9,8 +9,8 @@ int factors(int n)
     if (n < 1) {
         return -1;
     }
-    static int a[] = { 2, 3 };
-    int ret = 1;
+    int a[] = { 2, 3 };
+    int result = 1;
     int x = n;
     for (int i = 0; i < 2; ++i) {
         int factor = a[i];
@@ -19,9 +19,9 @@ int factors(int n)
             x /= factor;
             ++k;
         }
-        ret *= k + 1;
+        result *= k + 1;
         if (x == 1) {
-            return ret;
+            return result;
         }
     }
     int factor = 5;
@@ -36,16 +36,16 @@ int factors(int n)
         } else {
             factor += skip;
             skip ^= 6;
-            ret *= k + 1;
+            result *= k + 1;
             k = 0;
         }
     }
     if (x == factor) {
-        ret *= k + 2;
+        result *= k + 2;
     } else {
-        ret *= 2 * (k + 1);
+        result *= 2 * (k + 1);
     }
-    return ret;
+    return result;
 }
 
 int triangle(int minFactors)

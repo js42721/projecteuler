@@ -5,7 +5,7 @@
 
 int lcmOfRange(int upper)
 {
-    int ret = 1;
+    int result = 1;
     int sqrtLimit = sqrt(upper);
     PrimeSieve sieve(upper);
     int primes = sieve.countPrimes();
@@ -19,9 +19,9 @@ int lcmOfRange(int upper)
                 product *= p;
             } while (product <= upper);
         }
-        ret *= x; // x = p_i^(floor(log_p_i(upper)))
+        result *= x; // x = p_i^(floor(log_p_i(upper)))
     }
-    return ret;
+    return result;
 }
 
 int main()

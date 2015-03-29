@@ -6,7 +6,7 @@ long long largestPrimeFactor(long long n)
     if (n < 2) {
         return -1;
     }
-    static int a[] = { 2, 3 };
+    int a[] = { 2, 3 };
     long long x = n;
     for (int i = 0; i < 2; ++i) {
         int factor = a[i];

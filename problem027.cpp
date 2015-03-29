@@ -33,8 +33,9 @@ std::pair<int, int> eulerNumbers()
     int bestA, bestB, bestN = 0;
     PrimeSieve sieve(999);
     int primes = sieve.countPrimes();
-    // b must be prime or n^2 + a * n + b will not produce a prime when n = 0.
-    // b = 2 is skipped since it can only result in 2 primes (when a = -1).
+    // b must be prime or n^2 + an + b will not produce a prime when n = 0.
+    // b = 2 is skipped since it stops producing primes when n reaches 2 or
+    // earlier.
     for (int i = 2; i <= primes; ++i) {
         int b = sieve.nthPrime(i);
         // Skipping the only even value of b allows even values of a to be
@@ -44,10 +45,7 @@ std::pair<int, int> eulerNumbers()
             int n = 0;
             for (;;) {
                 int c = n * (a + n) + b;
-                if (c < 2) {
-                    break;
-                }
-                if (!((c <= 999) ? sieve.isPrime(c) : isPrime(c))) {
+                if (c < 2 || !((c <= 999) ? sieve.isPrime(c) : isPrime(c))) {
                     break;
                 }
                 ++n;

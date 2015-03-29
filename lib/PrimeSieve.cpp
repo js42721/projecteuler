@@ -6,8 +6,12 @@
 PrimeSieve::PrimeSieve(int upper)
 : upper(upper), sieve(upper / 3 + 1, true)
 {
+    if (upper < 0) {
+        throw std::invalid_argument("Negative upper bound");
+    }
+    sieve[0] = false;
     if (upper < 2) {
-        throw std::invalid_argument("Upper bound must be at least 2");
+        return;
     }
     int s1 = 7, s2 = 3;
     int twoSix = 2;
@@ -30,8 +34,7 @@ PrimeSieve::PrimeSieve(int upper)
     results.push_back(3);
     for (int i = 1; i < sieve.size(); ++i) {
         if (sieve[i]) {
-            int p = 3 * i + i % 2 + 1;
-            results.push_back(p);
+            results.push_back(3 * i + i % 2 + 1);
         }
     }
     if (results[results.size() - 1] > upper) {
@@ -59,14 +62,10 @@ int PrimeSieve::nthPrime(int n) const
 
 bool PrimeSieve::isPrime(int n) const
 {
-    if (n < 1 || n > upper) {
+    if (n < 0 || n > upper) {
         throw std::out_of_range("n out of range");
     }
-    switch (n) {
-    case 1:
-        return false;
-    case 2:
-    case 3:
+    if (n == 2 || n == 3) {
         return true;
     }
     if (n % 2 == 0 || n % 3 == 0) {

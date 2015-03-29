@@ -8,7 +8,7 @@ int longestCollatz(int upper)
     std::vector<int> mem(upper + 1);
     std::vector<int> chain;
     mem[1] = 1;
-    int ret = -1;
+    int result = -1;
     int longest = 0;
     for (int i = 2; i <= upper; ++i) {
         int size = mem[i];
@@ -35,10 +35,10 @@ int longestCollatz(int upper)
         }
         if (size > longest) {
             longest = size;
-            ret = i;
+            result = i;
         }
     }
-    return ret;
+    return result;
 }
 
 int main()

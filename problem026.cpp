@@ -29,7 +29,7 @@ int longestReciprocalCycle(int upper)
 {
     // See http://mathforum.org/library/drmath/view/67018.html.
     int longestPeriod = 0;
-    int ret = 1;
+    int result = 1;
     int i = upper;
     while (i > longestPeriod) {
         int x = i;
@@ -41,11 +41,11 @@ int longestReciprocalCycle(int upper)
         int period = multiplicativeOrder(10, x);
         if (period > longestPeriod) {
             longestPeriod = period;
-            ret = i;
+            result = i;
         }
         --i;
     }
-    return ret;
+    return result;
 }
 
 int main()
