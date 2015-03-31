@@ -47,7 +47,7 @@ int distinctPowers(int baseUpper, int expUpper)
     }
     // Counts duplicates for each group.
     for (int i = 2; i < len; ++i) {
-        std::vector<bool> discovered(expUpper + 2);
+        std::vector<bool> discovered(expUpper + 1);
         for (int j = 1; j < i; ++j) {
             int inc = lcm(i, j) / i;
             int pos = std::max(2, inc);
