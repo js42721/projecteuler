@@ -22,8 +22,7 @@ int main(int argc, char* argv[])
     mpz_class sum;
     std::string line;
     while (std::getline(file, line)) {
-        mpz_class x = mpz_class(line);
-        sum += x;
+        sum += mpz_class(line);
     }
     std::string ans(sum.get_str(), 0, 10);
     std::cout << "Answer: " << ans << '\n';

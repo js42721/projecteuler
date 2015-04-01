@@ -2,7 +2,6 @@ Project Euler Solutions
 =======================
 
 This repository contains C++ solutions for some of the Project Euler problems.
-Note that thorough input validation has been eschewed for the sake of brevity.
 
 | #   | Description | Solution |
 | :-- | :---------- | :------- |
