@@ -3,13 +3,13 @@
 
 bool isPalindrome(int n)
 {
-    int rev = 0;
+    int reverse = 0;
     int x = n;
     while (x != 0) {
-        rev = 10 * rev + x % 10;
+        reverse = 10 * reverse + x % 10;
         x /= 10;
     }
-    return rev == n;
+    return reverse == n;
 }
 
 std::vector<int> doubleBasePalindromes(int upper)

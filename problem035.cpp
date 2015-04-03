@@ -36,8 +36,7 @@ std::vector<int> circularPrimes(int maxDigits)
     results.push_back(2);
     results.push_back(5);
     for (int repeats = 1; repeats <= maxDigits; ++repeats) {
-        int i = 0;
-        for (;;) {
+        for (int i = 0;; ++i) {
             int j = i;
             int val = 0;
             for (int k = 0; k < repeats; ++k) {
@@ -50,7 +49,6 @@ std::vector<int> circularPrimes(int maxDigits)
             if (isCircularPrime(val)) {
                 results.push_back(val);
             }
-            ++i;
         }
     }
     return results;

@@ -32,18 +32,21 @@ std::vector<int> truncatablePrimes()
     // 1) 2, 3, 5, or 7 as the most significant digit.
     // 2) 1, 3, 7, or 9 for each of the middle digits.
     // 3) 3 or 7 as the least significant digit.
-    int sets[][4] = { { 2, 3, 5, 7 }, { 1, 3, 7, 9 }, { 3, 7 } };
+    int d1[] = { 2, 3, 5, 7 };
+    int d2[] = { 1, 3, 7, 9 };
+    int d3[] = { 3, 7 };
     std::vector<int> results;
     for (int digits = 2;; ++digits) {
-        int i = 0;
-        for (;;) {
+        for (int i = 0;; ++i) {
             int j = i;
             int val = 0;
-            for (int k = 0; k < digits - 1; ++k) {
-                val = 10 * val + sets[k > 0][j % 4];
+            val = 10 * val + d1[j % 4];
+            j /= 4;
+            for (int k = 2; k < digits; ++k) {
+                val = 10 * val + d2[j % 4];
                 j /= 4;
             }
-            val = 10 * val + sets[2][j % 2];
+            val = 10 * val + d3[j % 2];
             j /= 2;
             if (j != 0) {
                 break;
@@ -54,7 +57,6 @@ std::vector<int> truncatablePrimes()
                     return results;
                 }
             }
-            ++i;
         }
     }
 }
