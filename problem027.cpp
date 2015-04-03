@@ -1,32 +1,8 @@
-#include "lib/PrimeSieve.h"
+#include "lib/mathutils.h"
+#include "lib/primesieve.h"
 
-#include <cmath>
 #include <iostream>
 #include <utility>
-
-bool isPrime(int n)
-{
-    if (n < 2) {
-        return false;
-    }
-    if (n == 2 || n == 3) {
-        return true;
-    }
-    if (n % 2 == 0 || n % 3 == 0) {
-        return false;
-    }
-    int factor = 5;
-    int sqrtN = sqrt(n);
-    int twoFour = 2;
-    while (factor <= sqrtN) {
-        if (n % factor == 0) {
-            return false;
-        }
-        factor += twoFour;
-        twoFour ^= 6;
-    }
-    return true;
-}
 
 std::pair<int, int> eulerNumbers()
 {

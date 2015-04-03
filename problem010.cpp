@@ -1,4 +1,4 @@
-#include "lib/PrimeSieve.h"
+#include "lib/primesieve.h"
 
 #include <iostream>
 

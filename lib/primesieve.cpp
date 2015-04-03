@@ -1,4 +1,4 @@
-#include "PrimeSieve.h"
+#include "primesieve.h"
 
 #include <cmath>
 #include <stdexcept>

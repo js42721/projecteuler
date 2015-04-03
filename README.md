@@ -37,4 +37,8 @@ This repository contains C++ solutions for some of the Project Euler problems.
 | 30  | [Digit fifth powers](https://projecteuler.net/problem=30) | [problem030.cpp](problem030.cpp) |
 | 31  | [Coin sums](https://projecteuler.net/problem=31) | [problem031.cpp](problem031.cpp) |
 | 32  | [Pandigital products](https://projecteuler.net/problem=32) | [problem032.cpp](problem032.cpp) |
-
+| 33  | [Digit cancelling fractions](https://projecteuler.net/problem=33) | [problem033.cpp](problem033.cpp) |
+| 34  | [Digit factorials](https://projecteuler.net/problem=34) | [problem034.cpp](problem034.cpp) |
+| 35  | [Circular primes](https://projecteuler.net/problem=35) | [problem035.cpp](problem035.cpp) |
+| 36  | [Double-base palindromes](https://projecteuler.net/problem=36) | [problem036.cpp](problem036.cpp) |
+| 37  | [Truncatable primes](https://projecteuler.net/problem=37) | [problem037.cpp](problem037.cpp) |

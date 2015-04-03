@@ -1,23 +1,9 @@
+#include "lib/mathutils.h"
+
 #include <algorithm>
 #include <cmath>
-#include <cstdlib>
 #include <iostream>
 #include <vector>
-
-int gcd(int a, int b)
-{
-    while (b != 0) {
-        int c = b;
-        b = a % b;
-        a = c;
-    }
-    return abs(a);
-}
-
-int lcm(int a, int b)
-{
-    return abs(b / gcd(a, b) * a);
-}
 
 int distinctPowers(int baseUpper, int expUpper)
 {

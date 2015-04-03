@@ -1,29 +1,6 @@
-#include <cstdlib>
+#include "lib/mathutils.h"
+
 #include <iostream>
-
-int gcd(int a, int b)
-{
-    while (b != 0) {
-        int c = b;
-        b = a % b;
-        a = c;
-    }
-    return abs(a);
-}
-
-int multiplicativeOrder(int base, int n)
-{
-    if (n == 1 || gcd(base, n) != 1) {
-        return 0;
-    }
-    int order = 1;
-    int powMod = base;
-    while (powMod != 1) {
-        powMod = (powMod * base) % n;
-        ++order;
-    }
-    return order;
-}
 
 int longestReciprocalCycle(int upper)
 {

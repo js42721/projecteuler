@@ -1,16 +1,7 @@
-#include <cmath>
-#include <cstdlib>
-#include <iostream>
+#include "lib/mathutils.h"
 
-int gcd(int a, int b)
-{
-    while (b != 0) {
-        int c = b;
-        b = a % b;
-        a = c;
-    }
-    return abs(a);
-}
+#include <cmath>
+#include <iostream>
 
 int pythagoreanTripleProduct(int sum)
 {
