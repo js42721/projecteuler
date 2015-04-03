@@ -30,7 +30,7 @@ std::vector<int> truncatablePrimes()
 {
     // Possible truncatable primes will have the following:
     // 1) 2, 3, 5, or 7 as the most significant digit.
-    // 2) 1, 3, 7, or 9 as the middle digits.
+    // 2) 1, 3, 7, or 9 for each of the middle digits.
     // 3) 3 or 7 as the least significant digit.
     int sets[][4] = { { 2, 3, 5, 7 }, { 1, 3, 7, 9 }, { 3, 7 } };
     std::vector<int> results;
