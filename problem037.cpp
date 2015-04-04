@@ -8,20 +8,12 @@ bool isTruncatablePrime(int n)
     if (n <= 10 || !isPrime(n)) {
         return false;
     }
-    int x = n;
-    int mod = 1;
-    while (x /= 10) {
-        if (!isPrime(x)) {
+    int x = 10;
+    while (x < n) {
+        if (!isPrime(n % x) || !isPrime(n / x)) {
             return false;
         }
-        mod *= 10;
-    }
-    x = n;
-    while (x %= mod) {
-        if (!isPrime(x)) {
-            return false;
-        }
-        mod /= 10;
+        x *= 10;
     }
     return true;
 }
@@ -36,8 +28,9 @@ std::vector<int> truncatablePrimes()
     int d2[] = { 1, 3, 7, 9 };
     int d3[] = { 3, 7 };
     std::vector<int> results;
+    int product = 8;
     for (int digits = 2;; ++digits) {
-        for (int i = 0;; ++i) {
+        for (int i = 0; i < product; ++i) {
             int j = i;
             int val = 0;
             val = 10 * val + d1[j % 4];
@@ -48,9 +41,6 @@ std::vector<int> truncatablePrimes()
             }
             val = 10 * val + d3[j % 2];
             j /= 2;
-            if (j != 0) {
-                break;
-            }
             if (isTruncatablePrime(val)) {
                 results.push_back(val);
                 if (results.size() == 11) {
@@ -58,6 +48,7 @@ std::vector<int> truncatablePrimes()
                 }
             }
         }
+        product *= 4;
     }
 }
 

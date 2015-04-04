@@ -8,12 +8,13 @@ bool isCircularPrime(int n)
     if (!isPrime(n)) {
         return false;
     }
-    int x = n;
-    int mult = 1;
     int digits = 1;
-    while (x /= 10) {
-        mult *= 10;
+    int mult = 1;
+    int x = n / 10;
+    while (x != 0) {
         ++digits;
+        mult *= 10;
+        x /= 10;
     }
     x = n;
     for (int i = 1; i < digits; ++i) {
@@ -35,21 +36,20 @@ std::vector<int> circularPrimes(int maxDigits)
     std::vector<int> results;
     results.push_back(2);
     results.push_back(5);
-    for (int repeats = 1; repeats <= maxDigits; ++repeats) {
-        for (int i = 0;; ++i) {
+    int product = 4;
+    for (int digits = 1; digits <= maxDigits; ++digits) {
+        for (int i = 0; i < product; ++i) {
             int j = i;
             int val = 0;
-            for (int k = 0; k < repeats; ++k) {
+            for (int k = 0; k < digits; ++k) {
                 val = 10 * val + d[j % 4];
                 j /= 4;
-            }
-            if (j != 0) {
-                break;
             }
             if (isCircularPrime(val)) {
                 results.push_back(val);
             }
         }
+        product *= 4;
     }
     return results;
 }

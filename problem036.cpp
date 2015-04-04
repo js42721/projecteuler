@@ -15,9 +15,8 @@ bool isPalindrome(int n)
 std::vector<int> doubleBasePalindromes(int upper)
 {
     std::vector<int> results;
-    int i = 1;
     // Generates all binary palindromes up to the upper limit.
-    for (;;) {
+    for (int i = 1;; ++i) {
         int reverse = 0;
         int len = 0;
         int x = i;
@@ -42,7 +41,6 @@ std::vector<int> doubleBasePalindromes(int upper)
         } else {
             break;
         }
-        ++i;
     }
     return results;
 }
