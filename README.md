@@ -42,3 +42,5 @@ This repository contains C++ solutions for some of the Project Euler problems.
 | 35  | [Circular primes](https://projecteuler.net/problem=35) | [problem035.cpp](problem035.cpp) |
 | 36  | [Double-base palindromes](https://projecteuler.net/problem=36) | [problem036.cpp](problem036.cpp) |
 | 37  | [Truncatable primes](https://projecteuler.net/problem=37) | [problem037.cpp](problem037.cpp) |
+| 38  | [Pandigital multiples](https://projecteuler.net/problem=38) | [problem038.cpp](problem038.cpp) |
+| 39  | [Integer right triangles](https://projecteuler.net/problem=39) | [problem039.cpp](problem039.cpp) |

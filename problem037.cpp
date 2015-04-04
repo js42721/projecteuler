@@ -32,8 +32,7 @@ std::vector<int> truncatablePrimes()
     for (int digits = 2;; ++digits) {
         for (int i = 0; i < product; ++i) {
             int j = i;
-            int val = 0;
-            val = 10 * val + d1[j % 4];
+            int val = d1[j % 4];
             j /= 4;
             for (int k = 2; k < digits; ++k) {
                 val = 10 * val + d2[j % 4];

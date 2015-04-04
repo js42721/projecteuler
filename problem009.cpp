@@ -23,14 +23,13 @@ int pythagoreanTripleProduct(int sum)
         int y = x / m; // k * (m + n)
         // m and n must be of different parity.
         for (int n = m % 2 + 1; n < m; n += 2) {
-            if (y % (m + n) != 0 || gcd(m, n) != 1) {
-                continue;
+            if (y % (m + n) == 0 && gcd(m, n) == 1) {
+                int k = y / (m + n);
+                int a = k * (m * m - n * n);
+                int b = k * 2 * m * n;
+                int c = k * (m * m + n * n);
+                return a * b * c;
             }
-            int k = y / (m + n);
-            int a = k * (m * m - n * n);
-            int b = k * 2 * m * n;
-            int c = k * (m * m + n * n);
-            return a * b * c;
         }
     }
     return -1;
