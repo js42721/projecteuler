@@ -39,6 +39,7 @@ int sum(const Triple& t)
 
 void pythagoreanTriples(const Triple& root, int maxPerimeter, std::vector<Triple>& results)
 {
+    // Recursively generates primitive triples using matrix multiplication. 
     if (sum(root) > maxPerimeter) {
         return;
     }
@@ -64,7 +65,8 @@ int rightestTrianglePerimeter(int maxPerimeter)
 {
     int result = -1;
     std::vector<Triple> triples = pythagoreanTriples(maxPerimeter);
-    std::vector<int> vec(maxPerimeter / 2 + 1);
+    std::vector<int> vec(maxPerimeter / 2 + 1); // Only holds even values.
+    // Computes multiples of the sums of primitive triples.
     for (int i = 0; i < triples.size(); ++i) {
         int p = sum(triples[i]);
         int m = p;
