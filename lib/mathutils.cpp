@@ -43,20 +43,6 @@ int lcm(int a, int b)
     return abs(a / gcd(a, b) * b);
 }
 
-int multiplicativeOrder(int base, int n)
-{
-    if (n == 1 || gcd(base, n) != 1) {
-        return 0;
-    }
-    int order = 1;
-    int powMod = base;
-    while (powMod != 1) {
-        powMod = (powMod * base) % n;
-        ++order;
-    }
-    return order;
-}
-
 long long binomialCoefficient(int n, int k)
 {
     if (k < 0 || k > n) {

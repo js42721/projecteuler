@@ -44,3 +44,7 @@ This repository contains C++ solutions for some of the Project Euler problems.
 | 37  | [Truncatable primes](https://projecteuler.net/problem=37) | [problem037.cpp](problem037.cpp) |
 | 38  | [Pandigital multiples](https://projecteuler.net/problem=38) | [problem038.cpp](problem038.cpp) |
 | 39  | [Integer right triangles](https://projecteuler.net/problem=39) | [problem039.cpp](problem039.cpp) |
+| 40  | [Champernowne's constant](https://projecteuler.net/problem=40) | [problem040.cpp](problem040.cpp) |
+| 41  | [Pandigital prime](https://projecteuler.net/problem=41) | [problem041.cpp](problem041.cpp) |
+| 42  | [Coded triangle numbers](https://projecteuler.net/problem=42) | [problem042.cpp](problem042.cpp) |
+| 43  | [Sub-string divisibility](https://projecteuler.net/problem=43) | [problem043.cpp](problem043.cpp) |

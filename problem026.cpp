@@ -2,6 +2,20 @@
 
 #include <iostream>
 
+int multiplicativeOrder(int base, int n)
+{
+    if (n == 1 || gcd(base, n) != 1) {
+        return 0;
+    }
+    int order = 1;
+    int powMod = base;
+    while (powMod != 1) {
+        powMod = (powMod * base) % n;
+        ++order;
+    }
+    return order;
+}
+
 int longestReciprocalCycle(int upper)
 {
     // See http://mathforum.org/library/drmath/view/67018.html.
