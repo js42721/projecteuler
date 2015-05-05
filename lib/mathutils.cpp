@@ -9,21 +9,25 @@ bool isPrime(int n)
     if (n < 2) {
         return false;
     }
-    if (n == 2 || n == 3) {
-        return true;
+    int a[] = { 2, 3, 5 };
+    for (int i = 0; i < 3; ++i) {
+        if (n == a[i]) {
+            return true;
+        }
+        if (n % a[i] == 0) {
+            return false;
+        }
     }
-    if (n % 2 == 0 || n % 3 == 0) {
-        return false;
-    }
-    int factor = 5;
+    int inc[] = { 4, 2, 4, 2, 4, 6, 2, 6 };
+    int idx = 0;
+    int factor = 7;
     int sqrtN = sqrt(n);
-    int twoFour = 2;
     while (factor <= sqrtN) {
         if (n % factor == 0) {
             return false;
         }
-        factor += twoFour;
-        twoFour ^= 6;
+        factor += inc[idx];
+        idx = (idx + 1) % 8;
     }
     return true;
 }

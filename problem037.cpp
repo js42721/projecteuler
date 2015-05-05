@@ -9,12 +9,12 @@ bool isTruncatablePrime(int n)
         return false;
     }
     int x = 10;
-    while (x < n) {
+    do {
         if (!isPrime(n % x) || !isPrime(n / x)) {
             return false;
         }
         x *= 10;
-    }
+    } while (x < n);
     return true;
 }
 

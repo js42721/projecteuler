@@ -9,10 +9,10 @@ int factors(int n)
     if (n < 1) {
         return -1;
     }
-    int a[] = { 2, 3 };
+    int a[] = { 2, 3, 5 };
     int result = 1;
     int x = n;
-    for (int i = 0; i < 2; ++i) {
+    for (int i = 0; i < 3; ++i) {
         int factor = a[i];
         int k = 0;
         while (x % factor == 0) {
@@ -24,9 +24,10 @@ int factors(int n)
             return result;
         }
     }
-    int factor = 5;
+    int inc[] = { 4, 2, 4, 2, 4, 6, 2, 6 };
+    int idx = 0;
+    int factor = 7;
     int sqrtX = sqrt(x);
-    int skip = 2;
     int k = 0;
     while (factor <= sqrtX) {
         if (x % factor == 0) {
@@ -34,8 +35,8 @@ int factors(int n)
             sqrtX = sqrt(x);
             ++k;
         } else {
-            factor += skip;
-            skip ^= 6;
+            factor += inc[idx];
+            idx = (idx + 1) % 8;
             result *= k + 1;
             k = 0;
         }
