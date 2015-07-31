@@ -48,3 +48,6 @@ This repository contains C++ solutions for some of the Project Euler problems.
 | 41  | [Pandigital prime](https://projecteuler.net/problem=41) | [problem041.cpp](problem041.cpp) |
 | 42  | [Coded triangle numbers](https://projecteuler.net/problem=42) | [problem042.cpp](problem042.cpp) |
 | 43  | [Sub-string divisibility](https://projecteuler.net/problem=43) | [problem043.cpp](problem043.cpp) |
+| 44  | [Pentagon numbers](https://projecteuler.net/problem=44) | [problem044.cpp](problem044.cpp) |
+| 45  | [Triangular, pentagonal, and hexagonal](https://projecteuler.net/problem=45) | [problem045.cpp](problem045.cpp) |
+| 46  | [Goldbach's other conjecture](https://projecteuler.net/problem=46) | [problem046.cpp](problem046.cpp) |
